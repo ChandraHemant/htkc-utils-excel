@@ -3,7 +3,7 @@
         'name' => 'chandra-hemant/htkc-utils-excel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '76737e3fe15f995f901ff9c8eeb5ba6ccb52b7a9',
+        'reference' => 'e4fea7c4d1a7551b9f710db3316240f8241b3e5e',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'chandra-hemant/htkc-utils-excel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '76737e3fe15f995f901ff9c8eeb5ba6ccb52b7a9',
+            'reference' => 'e4fea7c4d1a7551b9f710db3316240f8241b3e5e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
