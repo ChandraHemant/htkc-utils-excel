@@ -1,0 +1,48 @@
+{
+    "name": "chandra-hemant/htkc-utils-excel",
+    "description": "HTKC Utils Excel library for Excel Export in laravel",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+      "laravel",
+      "php",
+      "phpspreadsheet",
+      "phpexcel",
+      "excel",
+      "csv",
+      "export",
+      "import",
+      "batch"
+    ],
+    "autoload": {
+        "psr-4": {
+            "ChandraHemant\\HtkcUtilsExcel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hemant Kumar Chandra",
+            "email": "hemantchandra242@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "phpoffice/phpspreadsheet": "^2.0",
+        "illuminate/support": "^10.43",
+        "psr/simple-cache": "^3.0",
+        "composer/semver": "^3.4",
+        "predis/predis": "^2.2",
+        "laravel/scout": "^10.8"
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "ChandraHemant\\HtkcUtilsExcel\\ExcelServiceProvider"
+        ],
+        "aliases": {
+          "Excel": "ChandraHemant\\HtkcUtilsExcel\\Facades\\Excel"
+        }
+      }
+    }
+}
