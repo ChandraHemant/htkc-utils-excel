@@ -44,5 +44,7 @@
           "Excel": "ChandraHemant\\HtkcUtilsExcel\\Facades\\Excel"
         }
       }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
