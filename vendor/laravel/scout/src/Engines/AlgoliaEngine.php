@@ -52,7 +52,7 @@ class AlgoliaEngine extends Engine
             return;
         }
 
-        $index = $this->algolia->initIndex($models->first()->searchableAs());
+        $index = $this->algolia->initIndex($models->first()->indexableAs());
 
         if ($this->usesSoftDelete($models->first()) && $this->softDelete) {
             $models->each->pushSoftDeleteMetadata();
@@ -87,7 +87,7 @@ class AlgoliaEngine extends Engine
             return;
         }
 
-        $index = $this->algolia->initIndex($models->first()->searchableAs());
+        $index = $this->algolia->initIndex($models->first()->indexableAs());
 
         $keys = $models instanceof RemoveableScoutCollection
             ? $models->pluck($models->first()->getScoutKeyName())
@@ -280,7 +280,7 @@ class AlgoliaEngine extends Engine
      */
     public function flush($model)
     {
-        $index = $this->algolia->initIndex($model->searchableAs());
+        $index = $this->algolia->initIndex($model->indexableAs());
 
         $index->clearObjects();
     }

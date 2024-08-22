@@ -53,7 +53,7 @@ class MeilisearchEngine extends Engine
             return;
         }
 
-        $index = $this->meilisearch->index($models->first()->searchableAs());
+        $index = $this->meilisearch->index($models->first()->indexableAs());
 
         if ($this->usesSoftDelete($models->first()) && $this->softDelete) {
             $models->each->pushSoftDeleteMetadata();
@@ -88,7 +88,7 @@ class MeilisearchEngine extends Engine
             return;
         }
 
-        $index = $this->meilisearch->index($models->first()->searchableAs());
+        $index = $this->meilisearch->index($models->first()->indexableAs());
 
         $keys = $models instanceof RemoveableScoutCollection
             ? $models->pluck($models->first()->getScoutKeyName())
@@ -363,7 +363,7 @@ class MeilisearchEngine extends Engine
      */
     public function flush($model)
     {
-        $index = $this->meilisearch->index($model->searchableAs());
+        $index = $this->meilisearch->index($model->indexableAs());
 
         $index->deleteAllDocuments();
     }

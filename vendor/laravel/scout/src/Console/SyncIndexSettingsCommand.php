@@ -7,7 +7,9 @@ use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Laravel\Scout\EngineManager;
+use Symfony\Component\Console\Attribute\AsCommand;
 
+#[AsCommand(name: 'scout:sync-index-settings')]
 class SyncIndexSettingsCommand extends Command
 {
     /**
@@ -82,7 +84,7 @@ class SyncIndexSettingsCommand extends Command
     protected function indexName($name)
     {
         if (class_exists($name)) {
-            return (new $name)->searchableAs();
+            return (new $name)->indexableAs();
         }
 
         $prefix = config('scout.prefix');
